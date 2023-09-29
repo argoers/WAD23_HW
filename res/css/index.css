@@ -1,0 +1,27 @@
+.post-box{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 150px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.post-image {
+    float: left;
+    padding: 10px 0;
+    height: 50px;
+    width: auto;
+}
+
+.post-date {
+    float: right;
+}
+
+.likeIcon {
+    float: left;
+    width: 80px;
+    height: auto;
+
+
+}
