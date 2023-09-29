@@ -1,0 +1,15 @@
+.post-box{
+    background-color: lightgray;
+    margin: 40px 150px;
+    padding: 30px;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.post-box input{
+    float: right;
+    height: 50px;
+    ::placeholder{
+        text-align: right;
+    }
+}

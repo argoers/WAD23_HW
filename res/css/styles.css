@@ -1,0 +1,29 @@
+.topnav {
+    background-color: darkgrey;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-family: "Gill Sans", sans-serif;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: yellow;
+}
+
+.logo-image {
+    float: right;
+    padding: 7px 8px;
+}
+
+.logo-image img {
+    height: 30px;
+    width: auto;
+}
