@@ -1,6 +1,5 @@
 .post-box{
-    padding: 30px;
-    padding-right: 10px;
+    padding: 30px 10px 30px 30px;
     margin: 40px 150px;
     background-color: lightgray;
     border-radius: 10px;
