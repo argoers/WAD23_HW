@@ -1,8 +1,10 @@
 .flex-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+
 }
 
 .left-sidebar{
@@ -10,14 +12,13 @@
     background-color: darkgrey;
     border-radius: 10px;
     margin: 10px 0;
-    min-width: 100px;
-    min-height: 40px;
-    flex-grow: 1;
+    min-height: 30px;
+    flex: 1 1 80px;
 }
 
 .posts-area{
-    min-width: 480px;
-    flex-grow: 4;
+    flex: 4 0 640px;
+/*    min-width: 480px;*/
 }
 
 .right-sidebar{
@@ -25,9 +26,8 @@
     background-color: darkgrey;
     border-radius: 10px;
     margin: 10px 0;
-    min-width: 100px;
-    min-height: 40px;
-    flex-grow: 1;
+    min-height: 30px;
+    flex: 1 1 80px;
 }
 
 
@@ -64,4 +64,10 @@ footer div{
 
 p + img{
     margin: -20px;
+}
+
+@media (min-width: 1000px) {
+    .flex-container {
+        flex-direction: row;
+    }
 }
