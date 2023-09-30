@@ -2,19 +2,26 @@
     background-color: lightgray;
     display: flex;
     flex-direction: column;
-    margin: 40px 150px;
+    margin: 30px 150px;
     border-radius: 10px;
     padding: 30px;
 }
 
 .post-image {
+    margin: auto;
+    width: 800px;
+    height: auto;
+
+}
+
+.post-header > img {
     float: left;
     padding: 10px 0;
     height: 50px;
     width: auto;
 }
 
-.post-date {
+.post-header > div {
     float: right;
 }
 
@@ -22,6 +29,13 @@
     float: left;
     width: 80px;
     height: auto;
+}
 
+footer div{
+    text-align: center;
+    font-size: 20px;
+}
 
+p + img{
+    margin: -20px;
 }
