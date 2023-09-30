@@ -1,27 +1,24 @@
-.flex-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+.grid-container{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+
 }
 
 .left-sidebar{
     float: left;
     background-color: darkgrey;
     border-radius: 10px;
-    flex: 8%;
     margin: 10px 0;
 }
 
 .posts{
-    flex-direction: column;
-    flex: 80%;
+
 }
 
 .right-sidebar{
     float: right;
     background-color: darkgrey;
     border-radius: 10px;
-    flex: 8%;
     margin: 10px 0;
 }
 
@@ -38,8 +35,8 @@
 
 .post-image {
     float: right;
-    max-width: 1200px;
-    min-width: 400px;
+    max-width: 80%;
+    min-width: 40%;
     height: auto;
     margin: auto;
 
