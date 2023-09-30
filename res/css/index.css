@@ -1,25 +1,42 @@
-.grid-container{
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+ /*
     display: grid;
     grid-template-columns: 10% 80% 10%;
-
+*/
 }
 
 .left-sidebar{
+    display: inline;
     float: left;
     background-color: darkgrey;
     border-radius: 10px;
     margin: 10px 0;
+    min-width: 100px;
+    min-height: 40px;
+    flex-grow: 1;
+
 }
 
 .posts{
+    min-width: 480px;
+    flex-grow: 4;
 
 }
 
 .right-sidebar{
+    display: inline;
     float: right;
     background-color: darkgrey;
     border-radius: 10px;
     margin: 10px 0;
+    min-width: 100px;
+    min-height: 40px;
+    flex-grow: 1;
 }
 
 .post-box{
@@ -28,7 +45,7 @@
     display: flex;
     flex-direction: column;
 
-    margin: 30px 30px;
+    margin: 10px 30px;
     border-radius: 10px;
     padding: 30px;
 }
