@@ -1,15 +1,43 @@
 .post-box{
-    background-color: lightgray;
-    margin: 40px 150px;
-    padding: 30px;
-    border-radius: 10px;
-    height: 200px;
+    padding-right: 10px;
 }
 
-.post-box input{
-    float: right;
-    height: 50px;
-    ::placeholder{
-        text-align: right;
-    }
+.post-body{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+label{
+    text-align: right;
+    padding-left: 6px;
+    margin-right: 10px;
+}
+
+label + textarea{
+    resize: none;
+    overflow: hidden;
+    height: 80px;
+    width: 100%;
+}
+
+.text{
+    text-align: right;
+    margin-right: 10px
+}
+
+div button{
+    padding: 5px 9px;
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+
+#post-button-row{
+    display: flex;
+    justify-content: center;
+}
+a > button{
+    background-color: darkblue;
 }

@@ -10,12 +10,28 @@
     <div class="topnav">
         <a href="index.html">Home</a>
         <div class="logo-image">
-            <img src="/res/images/img.png">
+            <img src="/res/images/img.png" alt="logoImage">
         </div>
     </div>
+
     <div class= "post-box">
-        Post body
-        <textarea id="Name" name="Name" placeholder="textarea"></textarea>
+        <div class="post-body">
+            <label for="Name">Post<br>body</label><textarea class="text-box" id="Name" name="Name" placeholder="textarea"></textarea>
+        </div>
+        <div class="post-body">
+            <div class="text">
+                Select<br>file
+            </div>
+            <div>
+                <button>Choose File</button>
+            </div>
+        </div>
+        <div id="post-button-row">
+            <a href="index.html"><button class="post-button">
+                Create post
+            </button></a>
+        </div>
+
     </div>
 
 </body>
