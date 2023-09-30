@@ -1,11 +1,59 @@
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.left-sidebar{
+    float: left;
+    background-color: darkgrey;
+    border-radius: 10px;
+    flex: 8%;
+    margin: 10px 0;
+}
+
+.posts{
+    flex-direction: column;
+    flex: 80%;
+}
+
+.right-sidebar{
+    float: right;
+    background-color: darkgrey;
+    border-radius: 10px;
+    flex: 8%;
+    margin: 10px 0;
+}
+
+.post-box{
+    background-color: lightgray;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+
+    margin: 30px 30px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
 .post-image {
+    float: right;
+    max-width: 1200px;
+    min-width: 400px;
+    height: auto;
+    margin: auto;
+
+
+}
+
+.post-header > img {
     float: left;
     padding: 10px 0;
     height: 50px;
     width: auto;
 }
 
-.post-date {
+.post-header > div {
     float: right;
 }
 
@@ -13,4 +61,14 @@
     float: left;
     width: 80px;
     height: auto;
+}
+
+footer div{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+p + img{
+    margin: -20px;
 }

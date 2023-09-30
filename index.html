@@ -7,38 +7,70 @@
     <link rel="stylesheet" href="res/css/index.css">
 </head>
 <body>
-    <header class="topnav">
+    <header class="wide-box">
         <nav>
             <a href="index.html">Home</a>
             <a href="addPost.html">addPost</a>
         </nav>
         <div class="logo-image">
-            <img alt="User Logo" src="res/images/img.png">
+            <img id="user-logo" alt="User Logo" src="res/images/img.png">
         </div>
     </header>
-
-    <div class="post-box">
-        <div class="postHeader">
-            <img class="post-image" alt="Post Logo" src="res/images/img.png">
-            <div class="post-date">Oct 22, 2023</div>
-        </div>
-        <img class="postImage" alt="Post Image" src="res/images/tartu-old-city.jpg">
-        <p class="post-text">What a lovely city!</p>
-        <img class="likeIcon" alt="like" src="res/images/like.png"/>
-    </div>
-
-    <div class="post-box">
-        <div class="postHeader">
-            <div class="post-date">Oct 23, 2023</div>
-                <img class="post-image" alt="Post Logo" src="res/images/img.png">
+    <div class="flex-container">
+        <div class="left-sidebar"><br></div>
+        <div class="posts">
+            <div class="post-box">
+                <div class="post-header">
+                    <img class="post-logo" alt="Post Logo" src="res/images/img.png">
+                    <div class="post-date">Oct 22, 2023</div>
+                </div>
+                <img class="post-image" alt="Post Image" src="res/images/tartu-old-city.jpg">
+                <p class="post-text">What a lovely city!</p>
+                <img class="likeIcon" alt="like" src="res/images/like.png"/>
             </div>
-            <p class="post-text">When is the deadline for homework?</p>
-            <img class="likeIcon" alt="like" src="res/images/like.png"/>
+
+            <div class="post-box">
+                <div class="post-header">
+                    <div class="post-date">Oct 23, 2023</div>
+                    <img class="post-logo" alt="Post Logo" src="res/images/img.png">
+                </div>
+                <p class="post-text">When is the deadline for homework?</p>
+                <img class="likeIcon" alt="like" src="res/images/like.png"/>
+            </div>
+
+            <div class="post-box">
+                <div class="post-header">
+                    <div class="post-date">Oct 23, 2023</div>
+                    <img class="post-logo" alt="Post Logo" src="res/images/img.png">
+                </div>
+                <p class="post-text">I think it was sometime in October???</p>
+                <img class="likeIcon" alt="like" src="res/images/like.png"/>
+            </div>
+
+            <div class="post-box">
+                <div class="post-header">
+                    <img class="post-logo" alt="Post Logo" src="res/images/img.png">
+                    <div class="post-date">Oct 24, 2023</div>
+                </div>
+                <img class="post-image" alt="Post Image" src="res/images/pancakes.png">
+                <p class="post-text">Is someone going to the Pancake Morning?</p>
+                <img class="likeIcon" alt="like" src="res/images/like.png"/>
+            </div>
+
+            <div class="post-box">
+                <div class="post-header">
+                    <div class="post-date">Oct 28, 2023</div>
+                    <img class="post-logo" alt="Post Logo" src="res/images/img.png">
+                </div>
+                <p class="post-text">Sorry! Missed it. But what about BarBingo on Saturday?</p>
+                <img class="likeIcon" alt="like" src="res/images/like.png"/>
+            </div>
+        </div>
+
+        <div class="right-sidebar"><br></div>
     </div>
-
-
-    <footer>
-        Footer
+    <footer class="wide-box">
+        <div>Footer</div>
     </footer>
 
 </body>

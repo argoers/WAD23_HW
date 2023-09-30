@@ -1,29 +1,21 @@
-.post-box{
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    margin: 40px 150px;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.topnav {
+.wide-box {
     background-color: darkgrey;
     overflow: hidden;
+    min-height: 40px;
     border-radius: 10px;
+    padding: 7px 8px;
     max-width: 100%;
 }
 
-.topnav a {
+.wide-box a {
     float: left;
     color: black;
-    text-align: center;
-    padding: 14px 16px;
+    margin: 7px 8px;
     font-family: "Gill Sans", sans-serif;
     text-decoration: none;
 }
 
-.topnav a:hover {
+.wide-box a:hover {
     background-color: yellow;
 }
 
@@ -32,7 +24,7 @@
     padding: 7px 8px;
 }
 
-.logo-image img {
+#user-logo {
     height: 30px;
     width: auto;
 }
