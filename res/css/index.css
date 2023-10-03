@@ -66,6 +66,16 @@ p + img{
     margin: -20px;
 }
 
+nav{
+    display: flex;
+}
+
+a ~ div{
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 6px;
+}
+
 @media (min-width: 1000px) {
     .flex-container {
         flex-direction: row;

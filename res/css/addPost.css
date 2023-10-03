@@ -9,7 +9,7 @@ label{
     margin-right: 10px;
 }
 
-label + textarea{
+label ~ textarea{
     resize: none;
     overflow: hidden;
     height: 80px;
@@ -21,7 +21,7 @@ label + textarea{
     margin-right: 10px
 }
 
-div button{
+button{
     padding: 5px 9px;
     background-color: dimgrey;
     color: white;
