@@ -1,0 +1,46 @@
+label{
+    text-align: center;
+    padding-left: 6px;
+    margin-right: 10px;
+}
+
+.post-body{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.interactive-text{
+    text-decoration: none;
+    margin-left: 10px;
+    text-align: center;
+    color: blue;
+}
+
+input[type="submit"] {
+    padding: 5px 9px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: blue;
+}
+
+form {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .flex-container {
+        flex-direction: row;
+    }
+}
+
+h2 ~ p{
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 6px;
+}
