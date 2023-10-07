@@ -43,6 +43,11 @@
     padding: 30px;
 }
 
+.post-body{
+    display: flex;
+    margin-bottom: 30px;
+}
+
 nav{
     margin-left: 15px;
 }

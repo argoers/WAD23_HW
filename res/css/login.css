@@ -5,8 +5,6 @@ label{
 }
 
 .post-body{
-    display: flex;
-    margin-bottom: 30px;
     justify-content: center;
 }
 
