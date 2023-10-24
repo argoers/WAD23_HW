@@ -1,10 +1,10 @@
-window.onload = function() {
-
-
-
-    fetch('https://api.npoint.io/11caf0f2f65a77f2e447')
+window.onload = function (){
+    fetch('res/json/myjson.json')
         .then((response) => response.json())
         .then(json => {
+    /*fetch('https://api.npoint.io/11caf0f2f65a77f2e447')
+        .then((response) => response.json())
+        .then(json => {*/
             console.log(json);
 
             /// For each post in JSON
@@ -15,8 +15,12 @@ window.onload = function() {
                 ///// Create post header
                 let newPostHeader = document.createElement("div");
                 newPostHeader.className = "post-header";
-                let newPostDate = document.createTextNode(json[i].createTime);
+                /// Create post date element
+                let newPostDate = document.createElement("div");
+                newPostDate.innerText = json[i].createTime;
+                newPostDate.className = "post-date";
                 newPostHeader.appendChild(newPostDate);
+
                 let newPostProfileImage = document.createElement("img");
                 //Check if there is profile image for the user
                 if (json[i].profileImagePath === null){
@@ -68,5 +72,4 @@ window.onload = function() {
             footer.innerText = date;
             document.body.appendChild(footer);
         })
-
 }
