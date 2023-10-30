@@ -89,7 +89,7 @@ if(document.title === "Index"){
 
             let newPostLikeButton = document.createElement("button");
             newPostLikeButton.type = "button";
-            newPostLikeButton.className = "likeIcon";
+            newPostLikeButton.className = "likeButton";
             //newPostLikeButton.img = "res/images/like.png";
             let newPostLikeButtonImage =  document.createElement("img");
             newPostLikeButtonImage.src = "res/images/like.png";

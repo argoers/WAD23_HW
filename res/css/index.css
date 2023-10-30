@@ -48,9 +48,18 @@
     float: right;
 }
 
-.likeIcon {
+.likeButton {
     float: left;
-    width: 60px;
+    padding: 3px;
+/*    background-color: transparent;
+    border: none; */
+    width: 55px;
+    height: 55px;
+}
+
+.likeIcon {
+    margin: auto;
+    width: 40px;
     height: auto;
 }
 
