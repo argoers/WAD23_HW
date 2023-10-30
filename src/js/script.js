@@ -35,8 +35,6 @@ function showUserInfo(){
     }
 }
 
-console.log(document.title)
-
 if(document.title === "Index"){
     fetch('res/json/myjson.json')
         .then((response) => response.json())
@@ -87,10 +85,16 @@ if(document.title === "Index"){
             newPostParagraph.appendChild(newPostParagraphText);
             newPost.appendChild(newPostParagraph);
 
-            // Add like icon
-            let newPostLikeButton = document.createElement("img");
+            // Add like button
+
+            let newPostLikeButton = document.createElement("button");
+            newPostLikeButton.type = "button";
             newPostLikeButton.className = "likeIcon";
-            newPostLikeButton.src = "res/images/like.png";
+            //newPostLikeButton.img = "res/images/like.png";
+            let newPostLikeButtonImage =  document.createElement("img");
+            newPostLikeButtonImage.src = "res/images/like.png";
+            newPostLikeButtonImage.className = "likeIcon";
+            newPostLikeButton.appendChild(newPostLikeButtonImage);
             newPost.appendChild(newPostLikeButton);
             //Add post to posts-area
             // Poor solution add ID to postArea
