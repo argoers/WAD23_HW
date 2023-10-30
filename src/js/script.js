@@ -1,3 +1,5 @@
+let defaultImagePath = "res/images/"
+
 function showUserInfo(){
     let profile = document.getElementById("user-logo");
     profile.onclick = function (){
@@ -33,7 +35,9 @@ function showUserInfo(){
     }
 }
 
-if(window.location.pathname === "/WAD23_HW_/index.html"){
+console.log(document.title)
+
+if(document.title === "Index"){
     fetch('res/json/myjson.json')
         .then((response) => response.json())
         .then(json => {
@@ -58,13 +62,11 @@ if(window.location.pathname === "/WAD23_HW_/index.html"){
 
             let newPostProfileImage = document.createElement("img");
             //Check if there is profile image for the user
-            if (json[i].profileImagePath === null){
-                newPostProfileImage.src = "res/images/img.png" //Default image path
-            }
-            else{
-
-                newPostProfileImage.src = json[i].profileImagePath;
-            }
+            newPostProfileImage.src = defaultImagePath.concat(json[i].userId).concat(".png");
+            newPostProfileImage.addEventListener("error", function (){
+                //Default image path if profile image missing for given user
+                newPostProfileImage.src = "res/images/img.png"
+            })
 
             newPostHeader.appendChild(newPostProfileImage);
             newPost.appendChild(newPostHeader);
@@ -74,7 +76,7 @@ if(window.location.pathname === "/WAD23_HW_/index.html"){
             if(json[i].contentImagePath !== null){
                 let newPostContentImage = document.createElement("img");
                 newPostContentImage.className = "post-image";
-                newPostContentImage.src = json[i].contentImagePath;
+                newPostContentImage.src = defaultImagePath.concat(json[i].contentImagePath);
                 newPost.appendChild(newPostContentImage);
             }
 
