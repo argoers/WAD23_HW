@@ -3,7 +3,6 @@
     "userId": 1,
     "id": 1,
     "createTime": "22 Oct, 2023",
-    "profileImagePath": "x",
     "contentImagePath": "tartu-old-city.jpg",
     "body": "What a lovely city!"
   },
@@ -11,7 +10,6 @@
     "userId": 2,
     "id": 2,
     "createTime": "Sep 6, 2023",
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "When is the deadline for homework?"
   },
@@ -19,7 +17,6 @@
     "userId": 3,
     "id": 3,
     "createTime": "Sep 6, 2023",
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "I think it was sometime in October???"
   },
@@ -27,7 +24,6 @@
     "userId": 1,
     "id": 4,
     "createTime": "Sep 20, 2023",
-    "profileImagePath": null,
     "contentImagePath": "pancakes.png",
     "body": "Is someone going to the Pancake Morning?"
   },
@@ -35,7 +31,6 @@
     "userId": 1,
     "id": 5,
     "createTime": "Sep 21, 2023",
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "Sorry! Missed it. But what about BarBingo on Saturday?"
   },
@@ -43,7 +38,6 @@
     "userId": 1,
     "id": 6,
     "createTime": null,
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   },
@@ -51,7 +45,6 @@
     "userId": 1,
     "id": 7,
     "createTime": null,
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   },
@@ -59,7 +52,6 @@
     "userId": 1,
     "id": 8,
     "createTime": null,
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   },
@@ -67,7 +59,6 @@
     "userId": 1,
     "id": 9,
     "createTime": null,
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   },
@@ -75,7 +66,6 @@
     "userId": 1,
     "id": 10,
     "createTime": null,
-    "profileImagePath": null,
     "contentImagePath": null,
     "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
   }
