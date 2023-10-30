@@ -1,11 +1,13 @@
+let defaultImagePath = "res/images/"
+
 window.onload = function() {
 
+//https://api.npoint.io/11caf0f2f65a77f2e447
 
-
-    fetch('https://api.npoint.io/11caf0f2f65a77f2e447')
+    fetch('res/json/myjson.json')
         .then((response) => response.json())
         .then(json => {
-            console.log(json);
+//            console.log(json);
 
             /// For each post in JSON
             for(let i = 0; i < json.length; i++){
@@ -15,17 +17,20 @@ window.onload = function() {
                 ///// Create post header
                 let newPostHeader = document.createElement("div");
                 newPostHeader.className = "post-header";
-                let newPostDate = document.createTextNode(json[i].createTime);
+
+                ///Post-date
+                let newPostDate = document.createElement(tag="div");
+                newPostDate.textContent = json[i].createTime;
+                newPostDate.className = "post-date";
                 newPostHeader.appendChild(newPostDate);
+
                 let newPostProfileImage = document.createElement("img");
                 //Check if there is profile image for the user
-                if (json[i].profileImagePath === null){
-                    newPostProfileImage.src = "res/images/img.png" //Default image path
-                }
-                else{
-
-                    newPostProfileImage.src = json[i].profileImagePath;
-                }
+                newPostProfileImage.src = defaultImagePath.concat(json[i].userId).concat(".png");
+                newPostProfileImage.addEventListener("error", function (){
+                    //Default image path if profile image missing for given user
+                    newPostProfileImage.src = "res/images/img.png"
+                })
 
                 newPostHeader.appendChild(newPostProfileImage);
                 newPost.appendChild(newPostHeader);
@@ -35,7 +40,7 @@ window.onload = function() {
                 if(json[i].contentImagePath !== null){
                     let newPostContentImage = document.createElement("img");
                     newPostContentImage.className = "post-image";
-                    newPostContentImage.src = json[i].contentImagePath;
+                    newPostContentImage.src = defaultImagePath.concat(json[i].contentImagePath);
                     newPost.appendChild(newPostContentImage);
                 }
 

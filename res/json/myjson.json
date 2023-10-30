@@ -2,13 +2,13 @@
   {
     "userId": 1,
     "id": 1,
-    "createTime": null,
-    "profileImagePath": null,
-    "contentImagePath": null,
+    "createTime": "22 Oct, 2023",
+    "profileImagePath": "x",
+    "contentImagePath": "tartu-old-city.jpg",
     "body": "What a lovely city!"
   },
   {
-    "userId": 1,
+    "userId": 2,
     "id": 2,
     "createTime": null,
     "profileImagePath": null,
@@ -16,7 +16,7 @@
     "body": "When is the deadline for homework?"
   },
   {
-    "userId": 1,
+    "userId": 3,
     "id": 3,
     "createTime": null,
     "profileImagePath": null,
