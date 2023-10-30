@@ -87,8 +87,7 @@ if(document.title === "Index"){
             newPostLikeButton.appendChild(newPostLikeButtonImage);
             newPost.appendChild(newPostLikeButton);
             //Add post to posts-area
-            // Poor solution add ID to postArea
-            document.getElementsByClassName("posts-area")[0].appendChild(newPost);
+            document.getElementById("posts-area").appendChild(newPost);
         }
         showUserInfo();
     })

@@ -14,7 +14,7 @@
     flex: 1 1 80px;
 }
 
-.posts-area{
+#posts-area{
     flex: 4 0 640px;
 /*    min-width: 480px;*/
 }
