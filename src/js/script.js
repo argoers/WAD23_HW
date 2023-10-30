@@ -3,32 +3,22 @@ let defaultImagePath = "res/images/"
 function showUserInfo(){
     let profile = document.getElementById("user-logo");
     profile.onclick = function (){
-        let profileInfoCheck = document.getElementById("profileInfo");
-        if (profileInfoCheck == null){
-            let profileInfo = document.createElement("div");
-            profileInfo.style.backgroundColor = "lightgray";
-            profileInfo.style.height = "100px";
-            profileInfo.style.borderRadius = "10px";
-            profileInfo.style.right = "8px";
-            profileInfo.style.width="200px";
-            profileInfo.style.position = "absolute";
+        //Check if profileInfo element already exists
+        let profileInfo = document.getElementById("profileInfo");
+        //If not create one
+        if (profileInfo == null){
+            profileInfo = document.createElement("div");
             profileInfo.id = "profileInfo";
-
             let userInfo = ["Kaur Veere",
                 "kaur.veere@ut.ee","logout"];
             for (let i = 0; i < userInfo.length; i++) {
                 let info = document.createElement("div");
                 info.innerText=userInfo[i];
-                info.style.marginTop = "10px";
-                info.style.marginLeft = "20px"
                 profileInfo.appendChild(info);
             }
-            profileInfo.style.display= "flex";
-            profileInfo.style.flexDirection= "column";
-            profileInfo.style.fontFamily = "Gill Sans, sans-serif";
-
             document.getElementsByTagName("header")[0].after(profileInfo);
         }
+        //If already exists remove on click
         else{
             profileInfo.remove();
         }

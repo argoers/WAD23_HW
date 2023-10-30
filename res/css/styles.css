@@ -50,3 +50,20 @@
 nav{
     margin-left: 15px;
 }
+
+#profileInfo{
+    background-color: lightgray;
+    height: 100px;
+    border-radius: 10px;
+    right: 8px;
+    width: 200px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: "Gill Sans", sans-serif;
+}
+
+#profileInfo div{
+    margin-top: 10px;
+    margin-left: 20px;
+}
