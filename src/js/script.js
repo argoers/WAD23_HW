@@ -99,7 +99,7 @@ if(document.title === "Index"){
     })
     .finally(() => {
         let footer = document.createElement("footer");
-        date = new Date().toLocaleString()
+        let date = new Date().toLocaleString()
         footer.innerText = date;
         document.body.appendChild(footer);
     })
