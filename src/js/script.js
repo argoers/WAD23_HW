@@ -26,12 +26,12 @@ function showUserInfo(){
 }
 
 if(document.title === "Index"){
-    fetch('res/json/myjson.json')
+    fetch('res/json/myjson.json') //JSON validated with https://jsonlint.com/
         .then((response) => response.json())
         .then(json => {
     /*fetch('https://api.npoint.io/11caf0f2f65a77f2e447')
         .then((response) => response.json())
-        .then(json => {*/
+        .then(json => { */
         console.log(json);
 
         /// For each post in JSON

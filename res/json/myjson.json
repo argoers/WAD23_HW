@@ -1,70 +1,73 @@
 [
   {
-    "userId": 1,
     "id": 1,
+    "userId": 1,
     "createTime": "29 Aug, 2023",
     "contentImagePath": "tartu-old-city.jpg",
     "body": "What a lovely city!"
   },
   {
-    "userId": 2,
     "id": 2,
+    "userId": 2,
     "createTime": "Sep 6, 2023",
     "contentImagePath": null,
     "body": "When is the deadline for homework?"
   },
   {
-    "userId": 3,
     "id": 3,
+    "userId": 3,
     "createTime": "Sep 6, 2023",
     "contentImagePath": null,
     "body": "I think it was sometime in October???"
   },
   {
-    "userId": 1,
+
     "id": 4,
+    "userId": 1,
     "createTime": "Sep 20, 2023",
     "contentImagePath": "pancakes.png",
     "body": "Is someone going to the Pancake Morning?"
   },
   {
-    "userId": 2,
+
     "id": 5,
+    "userId": 2,
     "createTime": "Sep 21, 2023",
     "contentImagePath": null,
     "body": "Sorry! I can't make it. But what about BarBingo on Saturday?"
   },
   {
-    "userId": 1,
+
     "id": 6,
+    "userId": 1,
     "createTime": "Sep 22, 2023",
     "contentImagePath": null,
     "body": "Yes! I will definetly go there!"
   },
   {
-    "userId": 3,
     "id": 7,
+    "userId": 3,
     "createTime": "Oct 1, 2023",
     "contentImagePath": "tartu2024.jpg",
     "body": "I think the Tartu 2024 logo looks borking:///"
   },
   {
-    "userId": 1,
     "id": 8,
+    "userId": 1,
     "createTime": "Oct 2, 2023",
     "contentImagePath": null,
     "body": "It has some interesting variations for different occasions online."
   },
   {
-    "userId": 2,
     "id": 9,
+    "userId": 2,
     "createTime": "Oct 2, 2023",
     "contentImagePath": null,
     "body": "I find it nice and minimalistic"
   },
   {
-    "userId": 1,
     "id": 10,
+    "userId": 1,
     "createTime": "Oct 29, 2023",
     "contentImagePath": null,
     "body": "When do the exams start??? I haven't learned anything yet:((("
