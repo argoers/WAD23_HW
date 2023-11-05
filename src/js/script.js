@@ -35,7 +35,7 @@ if(document.title === "Index"){
         console.log(json);
 
         /// For each post in JSON
-        for(let i = 0; i < json.length; i++){
+        for(let i = json.length-1; i >= 0; i--){
             let newPost = document.createElement("div");
             newPost.className = "post-box";
 

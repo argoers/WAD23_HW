@@ -2,7 +2,7 @@
   {
     "userId": 1,
     "id": 1,
-    "createTime": "22 Oct, 2023",
+    "createTime": "29 Aug, 2023",
     "contentImagePath": "tartu-old-city.jpg",
     "body": "What a lovely city!"
   },
@@ -28,45 +28,45 @@
     "body": "Is someone going to the Pancake Morning?"
   },
   {
-    "userId": 1,
+    "userId": 2,
     "id": 5,
     "createTime": "Sep 21, 2023",
     "contentImagePath": null,
-    "body": "Sorry! Missed it. But what about BarBingo on Saturday?"
+    "body": "Sorry! I can't make it. But what about BarBingo on Saturday?"
   },
   {
     "userId": 1,
     "id": 6,
-    "createTime": null,
+    "createTime": "Sep 22, 2023",
     "contentImagePath": null,
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "Yes! I will definetly go there!"
   },
   {
-    "userId": 1,
+    "userId": 3,
     "id": 7,
-    "createTime": null,
-    "contentImagePath": null,
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "createTime": "Oct 1, 2023",
+    "contentImagePath": "tartu2024.jpg",
+    "body": "I think the Tartu 2024 logo looks borking:///"
   },
   {
     "userId": 1,
     "id": 8,
-    "createTime": null,
+    "createTime": "Oct 2, 2023",
     "contentImagePath": null,
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "It has some interesting variations for different occasions online."
   },
   {
-    "userId": 1,
+    "userId": 2,
     "id": 9,
-    "createTime": null,
+    "createTime": "Oct 2, 2023",
     "contentImagePath": null,
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "I find it nice and minimalistic"
   },
   {
     "userId": 1,
     "id": 10,
-    "createTime": null,
+    "createTime": "Oct 29, 2023",
     "contentImagePath": null,
-    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    "body": "When do the exams start??? I haven't learned anything yet:((("
   }
 ]
