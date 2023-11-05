@@ -31,8 +31,7 @@ if(document.title === "Index"){
         .then(json => {
     /*fetch('https://api.npoint.io/11caf0f2f65a77f2e447')
         .then((response) => response.json())
-        .then(json => { */
-        console.log(json);
+        .then(json => {*/
 
         /// For each post in JSON
         for(let i = json.length-1; i >= 0; i--){
@@ -98,9 +97,14 @@ if(document.title === "Index"){
         document.body.appendChild(errDiv);
     })
     .finally(() => {
+        //Add Footer
         let footer = document.createElement("footer");
-        let date = new Date().toLocaleString()
-        footer.innerText = date;
+        footer.className = "wide-box";
+        let footerDiv = document.createElement("div");
+        footerDiv.innerText = "Footer";
+        footer.appendChild(footerDiv);
+        //let date = new Date().toLocaleString()
+        //footer.innerText = date;
         document.body.appendChild(footer);
     })
 }
