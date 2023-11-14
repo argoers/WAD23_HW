@@ -59,6 +59,10 @@
     height: 55px;
 }
 
+.likeNumber{
+    float: right;
+}
+
 .likeIcon {
     margin: auto;
     width: 40px;

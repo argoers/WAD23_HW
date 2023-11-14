@@ -1,7 +1,7 @@
 
 
 <template>
-    <div id="posts-area">
+
       <div class="post-box" v-for = "blogPost in PostList" :key="blogPost.id">
         <div class="post-header">
           <div class="post-date">{{blogPost.createTime}}</div>
@@ -9,9 +9,10 @@
         </div>
         <img v-if="blogPost.contentImagePath !== null" class="post-image" :src="defaultImagePath+blogPost.contentImagePath">
         <p class="post-text">{{blogPost.body}}</p>
-        <button class="likeButton"><img class="likeIcon" :src="defaultImagePath.concat('like.png')"></button>
+        <div><button class="likeButton" v-on:click="addLike(blogPost.id) "><img class="likeIcon" :src="defaultImagePath.concat('like.png')"></button>
+          <div class="likeNumber">{{blogPost.likes}} likes</div>
+        </div>
       </div>
-    </div>
 </template>
 
 <script>
@@ -30,6 +31,9 @@ export default {
   methods:{
     profileImageLoadError(e){
       e.target.src ='/images/img.png'
+    },
+    addLike(id){
+      this.$store.dispatch("addLikeAct", id)
     }
   }
 }
