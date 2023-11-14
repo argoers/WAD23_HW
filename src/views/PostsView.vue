@@ -11,10 +11,14 @@
 // @ is an alias to /src
 import PostComponent from "@/components/PostComponent.vue";
 
+
 export default {
   name: 'PostsView',
   components: {
     PostComponent,
   }
 }
+
+
+
 </script>
