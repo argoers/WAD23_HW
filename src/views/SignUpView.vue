@@ -1,8 +1,4 @@
-<script setup>
-export default {
-  name: 'SignUpView',
-}
-</script>
+
 
 <template>
   <div class="flex-container">
@@ -24,6 +20,14 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default{
+  name: 'SignUpView',
+  components: {},
+  methods: {}
+}
+</script>
 
 <style scoped>
   @import '@/assets/login.css';
