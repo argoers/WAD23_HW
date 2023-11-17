@@ -21,7 +21,6 @@ export default {
   data: function() {
     return {
       defaultImagePath: "./images/"
-
     }},
   computed: {
     PostList(){
