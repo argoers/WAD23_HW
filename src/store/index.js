@@ -101,7 +101,6 @@ export default createStore({
                 post.likes = 0;
             })
         }
-
             },
     actions: {
         addLikeAct(act, id){

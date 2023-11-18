@@ -3,7 +3,9 @@
     <div class="left-sidebar"></div>
     <div id="posts-area">
       <post-component></post-component>
-      <button v-on:click="resetLikes "> Reset likes </button>
+      <div class="button">
+        <button v-on:click="resetLikes " id="button"> Reset likes </button>
+      </div>
     </div>
     <div class="right-sidebar"></div>
   </div>
@@ -12,8 +14,6 @@
 <script>
 // @ is an alias to /src
 import PostComponent from "@/components/PostComponent.vue";
-
-
 export default {
   name: 'PostsView',
   components: {
@@ -25,7 +25,8 @@ export default {
     }
   }
 }
-
-
-
 </script>
+
+<style>
+  @import '@/assets/posts.css';
+</style>

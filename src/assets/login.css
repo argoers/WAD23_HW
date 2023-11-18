@@ -4,27 +4,52 @@ label{
     margin-right: 10px;
 }
 
-.post-body{
+.signup-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+}
+
+.button{
+    flex: 0 0 100%;
+}
+
+#button{
+    padding: 5px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: deepskyblue;
+}
+
+input{
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0 5px 0;
+}
+
+#password{
+    margin-top: 10px;
+}
+
+#password-label{
+    margin-top: 15px;
+}
+
+.signup-column{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
     justify-content: center;
 }
 
-.interactive-text{
-    text-decoration: none;
+.alert{
     margin-left: 10px;
-    text-align: center;
-    color: blue;
-}
-
-input[type="submit"] {
-    padding: 5px 9px;
-    background-color: darkblue;
-    color: white;
-    text-align: center;
-    width: 100%;
-}
-
-input[type="submit"]:hover {
-    background-color: blue;
+    text-align: left;
 }
 
 form {
@@ -35,10 +60,4 @@ form {
     .flex-container {
         flex-direction: row;
     }
-}
-
-h2 ~ p{
-    font-weight: bold;
-    font-size: 17px;
-    padding-top: 6px;
 }
