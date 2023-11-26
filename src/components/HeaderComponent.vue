@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="wide-box">
     <nav>
@@ -14,6 +10,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "HeaderComponent"
+}
+</script>
 
 <style scoped>
 @import '@/assets/styles.css';
