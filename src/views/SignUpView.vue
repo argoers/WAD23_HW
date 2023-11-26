@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="post-box">
       <form class="signup-body">
         <div class="signup-column">
@@ -10,7 +11,7 @@
           <input id="password" v-model="password" v-on:change="checkPassword" placeholder="Password">
         </div>
         <div class="button">
-          <button id="signup-button">Signup</button>
+          <button id="signup-button">Sign up</button>
         </div>
         <div v-if="showAlert" class="alert"><p>
           <b>Password is not valid, please check the following conditions:</b><br>
@@ -23,10 +24,12 @@
         </div>
       </form>
   </div>
-
+  <Footer />
 </template>
 
 <script>
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 export default {
   name: 'SignUpView',
   data: function () {
@@ -35,7 +38,10 @@ export default {
       showAlert: false
     }
   },
-  components: {},
+  components: {
+    Header,
+    Footer,
+  },
   methods: {
     checkPassword: function () {
       if (this.password.length < 8 || this.password.length > 15) {

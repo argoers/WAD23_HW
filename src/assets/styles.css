@@ -8,6 +8,24 @@
     display: flex;
     justify-content: space-between;
 }
+.footer-box {
+    bottom: 5px;
+    background-color: darkgrey;
+    overflow: hidden;
+    min-height: 40px;
+    border-radius: 10px;
+    padding: 7px 8px;
+    max-width: 100%;
+    justify-content: space-between;
+    width: 99%;
+    text-align: center;
+    margin-top: auto;
+}
+.body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
 
 .wide-box a {
     float: left;

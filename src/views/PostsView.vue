@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="flex-container">
     <div class="left-sidebar"></div>
     <div id="posts-area">
@@ -9,15 +10,20 @@
     </div>
     <div class="right-sidebar"></div>
   </div>
+  <Footer />
 </template>
 
 <script>
 // @ is an alias to /src
 import PostComponent from "@/components/PostComponent.vue";
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 export default {
   name: 'PostsView',
   components: {
     PostComponent,
+    Header,
+    Footer,
   },
   methods: {
     resetLikes: function() {
