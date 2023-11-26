@@ -4,7 +4,6 @@
    posts are created based on postComponent
    Footer-component for footer
    -->
-  <div class="page">
     <HeaderComponent/>
     <div class="flex-container">
       <div class="left-sidebar"></div>
@@ -12,13 +11,12 @@
         <!-- For each post in store-->
           <post-component v-for = "blogPost in PostList" :key="blogPost.id" :blogPost="blogPost"/>
         <div class="button">
-          <button v-on:click="resetLikes " id="button"> Reset likes </button>
+          <button v-on:click="resetLikes " id="resetButton"> Reset likes </button>
         </div>
       </div>
       <div class="right-sidebar"></div>
     </div>
     <FooterComponent/>
-  </div>
 </template>
 
 <script>
@@ -50,5 +48,5 @@ export default {
 </script>
 
 <style>
-  @import '@/assets/posts.css';
+  @import '@/assets/index.css';
 </style>

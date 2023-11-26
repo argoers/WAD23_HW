@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header/>
   <div class="post-box">
       <form class="signup-body">
         <div class="signup-column">
@@ -8,10 +8,10 @@
         </div>
         <div class="signup-column">
           <input id="email" placeholder="Email">
-          <input id="password" v-model="password" v-on:change="checkPassword" placeholder="Password">
+          <input id="password" v-model="password" v-on:change="checkPassword" type="password" placeholder="Password">
         </div>
         <div class="button">
-          <button id="signup-button">Sign up</button>
+          <button @click="checkPassword" id="signup-button">Sign up</button>
         </div>
         <div v-if="showAlert" class="alert"><p>
           <b>Password is not valid, please check the following conditions:</b><br>
@@ -44,6 +44,7 @@ export default {
   },
   methods: {
     checkPassword: function () {
+      //Check if password has length from 8 to 15 chars
       if (this.password.length < 8 || this.password.length > 15) {
         this.showAlert = true;
         return
@@ -53,11 +54,13 @@ export default {
       let lowerCaseLetterCount = 0;
       let hasNumericValue = false;
       let hasUnderscoreChar = false;
+
       for (let i = 0; i < this.password.length; i++) {
+        //Check if password contains uppercase letter
         if (this.password.charAt(i) === this.password.charAt(i).toUpperCase() && this.password.charAt(i) !== this.password.charAt(i).toLowerCase())
           hasUpperCaseLetter = true;
-
         if (i===0){
+          //Check it starts with uppercase letter
           if(hasUpperCaseLetter ===false){
             this.showAlert = true;
             return;
@@ -65,15 +68,17 @@ export default {
           else
             continue;
         }
-
+        //Check that it has at least to lowercase letters
         if (this.password.charAt(i) !== this.password.charAt(i).toUpperCase() && this.password.charAt(i) === this.password.charAt(i).toLowerCase()){
           lowerCaseLetterCount +=1;
           continue;
         }
+        //Check that it has numeric value
         if (!isNaN(parseInt(this.password.charAt(i)))){
           hasNumericValue = true;
           continue;
         }
+        //Check that it has underscore
         if (this.password.charAt(i) === '_')
           hasUnderscoreChar =true;
       }
@@ -82,9 +87,7 @@ export default {
         this.showAlert = true;
         return;
       }
-
       this.showAlert=false;
-      //this.password ='';
     }
   }
 }

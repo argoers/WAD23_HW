@@ -2,7 +2,7 @@
   <div class="post-box">
     <div class="post-header">
       <div class="post-date">{{blogPost.createTime}}</div>
-      <img :src="defaultImagePath+blogPost.id+'.png'" @error="profileImageLoadError" >
+      <img :src="defaultImagePath+blogPost.userId+'.png'" @error="profileImageLoadError" >
     </div>
     <img v-if="blogPost.contentImagePath !== null" class="post-image" :src="defaultImagePath+blogPost.contentImagePath">
     <p class="post-text">{{blogPost.body}}</p>

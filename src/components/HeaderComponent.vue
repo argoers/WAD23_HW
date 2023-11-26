@@ -16,5 +16,5 @@
 </template>
 
 <style scoped>
-@import '@/assets/index.css';
+@import '@/assets/styles.css';
 </style>

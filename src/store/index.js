@@ -6,7 +6,7 @@ export default createStore({
         postList:[
             {
                 id: 10,
-                userId: 1,
+                userId: 3,
                 createTime: "Oct 29, 2023",
                 contentImagePath: null,
                 body: "When do the exams start??? I haven't learned anything yet:(((",
@@ -70,7 +70,7 @@ export default createStore({
             },
             {
                 id: 2,
-                userId: 2,
+                userId: 1,
                 createTime: "Sep 6, 2023",
                 contentImagePath: null,
                 body: "When is the deadline for homework?",

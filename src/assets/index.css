@@ -91,8 +91,20 @@ a ~ div{
 }
 
 .footer-box{
-    position: absolute;
     bottom: 0;
+}
+
+.button{
+    text-align: center;
+}
+
+#resetButton{
+    padding: 5px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: deepskyblue;
 }
 
 @media (min-width: 1000px) {
