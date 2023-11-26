@@ -1,30 +1,32 @@
 <template>
-  <Header/>
-  <div class="post-box">
-      <form class="signup-body">
-        <div class="signup-column">
-          <label>Email</label>
-          <label id="password-label">Password</label>
-        </div>
-        <div class="signup-column">
-          <input id="email" placeholder="Email">
-          <input id="password" v-model="password" v-on:change="checkPassword" type="password" placeholder="Password">
-        </div>
-        <div class="button">
-          <button @click="checkPassword" id="signup-button">Sign up</button>
-        </div>
-        <div v-if="showAlert" class="alert"><p>
-          <b>Password is not valid, please check the following conditions:</b><br>
-          • The password should be of a specific length (at least 8 chars and less than 15 chars).<br>
-            • Includes at least one uppercase alphabet character.<br>
-            • Includes at least two lowercase alphabet characters.<br>
-            • Includes at least one numeric value.<br>
-            • It should start with an uppercase alphabet.<br>
-            • It should include the character “_”</p>
-        </div>
-      </form>
+  <div class="page-container">
+    <Header/>
+    <div class="post-box">
+        <form class="signup-body">
+          <div class="signup-column">
+            <label>Email</label>
+            <label id="password-label">Password</label>
+          </div>
+          <div class="signup-column">
+            <input id="email" placeholder="Email">
+            <input id="password" v-model="password" v-on:change="checkPassword" type="password" placeholder="Password">
+          </div>
+          <div class="button">
+            <button @click="checkPassword" id="signup-button">Sign up</button>
+          </div>
+          <div v-if="showAlert" class="alert"><p>
+            <b>Password is not valid, please check the following conditions:</b><br>
+            • The password should be of a specific length (at least 8 chars and less than 15 chars).<br>
+              • Includes at least one uppercase alphabet character.<br>
+              • Includes at least two lowercase alphabet characters.<br>
+              • Includes at least one numeric value.<br>
+              • It should start with an uppercase alphabet.<br>
+              • It should include the character “_”</p>
+          </div>
+        </form>
+    </div>
+    <Footer />
   </div>
-  <Footer />
 </template>
 
 <script>
