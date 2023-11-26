@@ -1,16 +1,18 @@
 <template>
-  <Header />
-  <div class="flex-container">
-    <div class="left-sidebar"></div>
-    <div id="posts-area">
-      <post-component></post-component>
-      <div class="button">
-        <button v-on:click="resetLikes " id="button"> Reset likes </button>
+  <div class="ago">
+    <Header />
+    <div class="flex-container">
+      <div class="left-sidebar"></div>
+      <div id="posts-area">
+        <post-component></post-component>
+        <div class="button">
+          <button v-on:click="resetLikes " id="button"> Reset likes </button>
+        </div>
       </div>
+      <div class="right-sidebar"></div>
     </div>
-    <div class="right-sidebar"></div>
+    <Footer />
   </div>
-  <Footer />
 </template>
 
 <script>
