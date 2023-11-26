@@ -88,6 +88,7 @@ export default createStore({
     },
     getters: {},
     mutations: {
+        //Functions that commit changes to the store
         addLike(state, id) {
             for(let post of state.postList){
                 if(post.id === id){
@@ -103,11 +104,15 @@ export default createStore({
         }
             },
     actions: {
+        // Actions, which call on an asynchronous operations that performs the synchronous commit
+
+        //Action to call asynchronously the addition of likes
         addLikeAct(act, id){
             setTimeout(function() {
                 act.commit("addLike", id)
             }, 100)
         },
+        //Action to call asynchronously the reset of likes
         resetLikesAct: act => {
             setTimeout(function() {
                 act.commit("resetLikes")
