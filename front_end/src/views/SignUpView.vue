@@ -8,11 +8,11 @@
             <label id="password-label">Password</label>
           </div>
           <div class="signup-column">
-            <input id="email" placeholder="Email">
+            <input id="email" v-model="email" placeholder="Email" >
             <input id="password" v-model="password" v-on:change="checkPassword" type="password" placeholder="Password">
           </div>
           <div class="button">
-            <button @click="checkPassword" id="signup-button">Sign up</button>
+            <button @click="SignUp" id="signup-button">Sign up</button>
           </div>
           <div v-if="showAlert" class="alert"><p>
             <b>Password is not valid, please check the following conditions:</b><br>
@@ -37,6 +37,7 @@ export default {
   data: function () {
     return {
       password: '',
+      email: '',
       showAlert: false
     }
   },
@@ -49,7 +50,7 @@ export default {
       //Check if password has length from 8 to 15 chars
       if (this.password.length < 8 || this.password.length > 15) {
         this.showAlert = true;
-        return
+        return false
       }
 
       let hasUpperCaseLetter = false;
@@ -65,7 +66,7 @@ export default {
           //Check it starts with uppercase letter
           if(hasUpperCaseLetter ===false){
             this.showAlert = true;
-            return;
+            return false;
           }
           else
             continue;
@@ -87,9 +88,39 @@ export default {
 
       if (!hasUpperCaseLetter || lowerCaseLetterCount <2 || !hasNumericValue || !hasUnderscoreChar) {
         this.showAlert = true;
-        return;
+        return false;
       }
       this.showAlert=false;
+      return true;
+    },
+
+    SignUp: function(){
+      //If password is OK
+      if(this.checkPassword()){
+        var data = {
+          email: this.email,
+          password: this.password
+        };
+        // using Fetch - post method - send an HTTP post request to the specified URI with the defined body
+        fetch("http://localhost:3000/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: 'include', //  Don't forget to specify this if you need cookies
+          body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              this.$router.push("/");
+              //location.assign("/");
+            })
+            .catch((e) => {
+              console.log(e);
+              console.log("error");
+            });
+      }
     }
   }
 }
