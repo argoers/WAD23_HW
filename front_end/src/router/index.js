@@ -5,6 +5,7 @@ import LoginView from "../views/LoginView.vue";
 import SelectedPostView from "@/views/SelectedPostView.vue";
 import auth from "../auth";
 import addPostView from "@/views/AddPostView.vue";
+import ContactsView from "@/views/ContactsView.vue";
 
 const routes = [
     {
@@ -57,6 +58,12 @@ const routes = [
         path: '/signup',
         name: 'signup',
         component: SignUpView
+    },
+
+    {
+        path: '/contacts',
+        name: 'contacts',
+        component: ContactsView
     }
 ]
 

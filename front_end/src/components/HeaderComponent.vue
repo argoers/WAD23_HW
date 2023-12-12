@@ -4,6 +4,8 @@
       <router-link to="/">Home</router-link>
       <div>|</div>
       <router-link to="/signup">Sign up</router-link>
+      <div>|</div>
+      <router-link to="/contacts">Contacts</router-link>
     </nav>
     <div class="logo-image">
       <a v-if="isAuthenticated" @click="logout()">Logout</a>
