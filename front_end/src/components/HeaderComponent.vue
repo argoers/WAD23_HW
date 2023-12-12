@@ -6,14 +6,38 @@
       <router-link to="/signup">Sign up</router-link>
     </nav>
     <div class="logo-image">
-      <img id="user-logo" alt="User Logo" src="images/img.png">
+      <a v-if="isAuthenticated" @click="logout()">Logout</a>
     </div>
   </div>
 </template>
 
 <script>
+import auth from "@/auth";
 export default {
-  name: "HeaderComponent"
+  name: "HeaderComponent",
+  computed: {
+    isAuthenticated() {
+      return auth.user.authenticated;
+    }
+  },
+  methods:{
+    logout() {
+      fetch("http://localhost:3000/logout", {
+        credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            console.log('jwt removed');
+            this.$router.push("/login");
+            //location.assign("/");
+          })
+          .catch((e) => {
+            console.log(e);
+            console.log("error logout");
+          });
+    },
+  }
 }
 </script>
 

@@ -30,6 +30,7 @@ export default {
     return {
       password: '',
       email: "",
+      userId: ""
     }
   },
   components: {
@@ -65,6 +66,7 @@ export default {
           })
           .then((data) => {
             console.log(data);
+            this.userId = data.user_id
             this.router().push("/");
           })
           .catch(e => {
