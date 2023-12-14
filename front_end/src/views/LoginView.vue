@@ -9,7 +9,7 @@
         </div>
         <div class="signup-column">
           <input id="email" v-model="email" placeholder="Email">
-          <input id="password" v-model="password" type="password" placeholder="Password">
+          <input id="password" v-model="password" placeholder="Password">
         </div>
         <div class="button">
           <button @click="LogIn" id="login-button">Login</button> or <button @click="router().push('/signup')" id="signup-button">Sign up</button>

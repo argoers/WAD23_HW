@@ -9,7 +9,7 @@
           </div>
           <div class="signup-column">
             <input id="email" v-model="email" placeholder="Email" >
-            <input id="password" v-model="password" v-on:change="checkPassword" type="password" placeholder="Password">
+            <input id="password" v-model="password" v-on:change="checkPassword"  placeholder="Password">
           </div>
           <div class="button">
             <button @click="SignUp" id="signup-button">Sign up</button>
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     checkPassword: function () {
-      //Check if password has length from 8 to 15 chars
+      /*//Check if password has length from 8 to 15 chars
       if (this.password.length < 8 || this.password.length > 15) {
         this.showAlert = true;
         return false
@@ -90,7 +90,7 @@ export default {
         this.showAlert = true;
         return false;
       }
-      this.showAlert=false;
+      this.showAlert=false;*/
       return true;
     },
 

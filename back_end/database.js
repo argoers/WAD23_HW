@@ -24,16 +24,31 @@ gen_random_uuid() A system function to generate a random Universally Unique IDen
 An example of generated uuid:  32165102-4866-4d2d-b90c-7a2fddbb6bc8
 */
 
-const createTblQuery = `
+const createUserTblQuery = `
     CREATE TABLE IF NOT EXISTS "users" (
         id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
         email VARCHAR(200) NOT NULL UNIQUE,
         password VARCHAR(200) NOT NULL 
     );`;
 
-execute(createTblQuery).then(result => {
+execute(createUserTblQuery).then(result => {
     if (result) {
-        console.log('Table "users" is created');
+        console.log('Table "users" is created!');
+    }
+});
+
+const createPostTblQuery = `
+    CREATE TABLE IF NOT EXISTS "posts"
+(
+    post_id SERIAL PRIMARY KEY ,
+    user_id uuid,
+    create_time date,
+    body text
+);`;
+
+execute(createPostTblQuery).then(result => {
+    if (result) {
+        console.log('Table "posts" is created!');
     }
 });
 
