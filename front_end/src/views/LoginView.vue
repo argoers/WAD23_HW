@@ -12,7 +12,7 @@
           <input id="password" v-model="password" placeholder="Password">
         </div>
         <div class="button">
-          <button @click="LogIn" id="login-button">Login</button> or <button @click="router().push('/signup')" id="signup-button">Sign up</button>
+          <button @click="LogIn" id="login-button">Login</button> Or <button @click="router().push('/signup')" id="signup-button">Sign up</button>
         </div>
       </form>
     </div>

@@ -2,13 +2,13 @@
   <div class="page-container">
     <Header/>
     <div class="post-box">
-      <div>Add post</div>
       <form class="signup-body">
+        <div id="header">Add Post</div>
         <div class="signup-column">
           <label>Body</label>
         </div>
         <div class="signup-column">
-          <input id="body" v-model="body" placeholder="Enter text here" >
+          <input id="body" v-model="body" placeholder="body" >
         </div>
         <div class="button">
           <button @click="AddPost">Add Post</button>

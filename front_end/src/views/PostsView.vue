@@ -9,13 +9,14 @@
       <div class="left-sidebar"></div>
       <div id="posts-area">
         <!-- For each post in store-->
-          <post-component v-for = "blogPost in posts" :blogPost="blogPost" @click="goToPostPath(blogPost.post_id)"/>
-      </div>
-      <div class="button">
-        <button @click="goToAddPost()"> Add Post </button>
-      </div>
-      <div class="button">
-        <button @click="deleteAllPosts()"> Delete All Posts </button>
+        <div class="button">
+          <button v-if="isAuthenticated" @click="logout()">Logout</button>
+        </div>
+        <post-component v-for = "blogPost in posts" :blogPost="blogPost" @click="goToPostPath(blogPost.post_id)"/>
+        <div class="twoButton">
+          <button @click="goToAddPost()"> Add post </button>
+          <button @click="deleteAllPosts()"> Delete all </button>
+        </div>
       </div>
       <div class="right-sidebar"></div>
     </div>
@@ -28,6 +29,7 @@ import PostComponent from "@/components/PostComponent.vue";
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import router from "@/router";
+import auth from "@/auth";
 export default {
   name: 'PostsView',
   components: {
@@ -78,6 +80,25 @@ export default {
 //          .then((data) => (this.posts = data))
 //          .catch((err) => console.log(err.message));
 //    },
+    logout() {
+      fetch("http://localhost:3000/logout", {
+        credentials: 'include', //  Don't forget to specify this if you need cookies
+      })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            console.log('jwt removed');
+            this.$router.push("/login");
+            //location.assign("/");
+          })
+          .catch((e) => {
+            console.log(e);
+            console.log("error logout");
+          });
+    },
+    isAuthenticated() {
+      return auth.user.authenticated;
+    },
 
     // Method to reset likes
     // triggers action, which performs asynchronous operation

@@ -4,25 +4,29 @@
    posts are created based on postComponent
    Footer-component for footer
    -->
+  <div class="page-container">
   <HeaderComponent/>
   <div class="flex-container">
-    <div class="left-sidebar"></div>
       <div id="posts-area">
         <div class="post-box">
-          <div class="post-header">
-             A post
-            <div class="post-date">{{parseDate}}</div>
+          <form class="signup-body">
+            <div id="header">A Post</div>
+            <div class="signup-column">
+              <label>Body</label>
+            </div>
+            <div class="signup-column">
+              <input class="post-text" v-model="this.post.body">
+            </div>
+          <div class="twoButtonLogin">
+            <button v-on:click="this.updatePost()">Update</button>
+            <button v-on:click="this.deletePost()">Delete</button>
           </div>
-          <input class="post-text" v-model="this.post.body">
-          <div>
-            <button class="button" v-on:click="this.updatePost()">Update</button>
-            <button class="button" v-on:click="this.deletePost()">Delete</button>
-          </div>
+          </form>
         </div>
       </div>
-    <div class="right-sidebar"></div>
   </div>
   <FooterComponent/>
+  </div>
 </template>
 
 <script>
