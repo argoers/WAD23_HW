@@ -74,12 +74,7 @@ export default {
           .catch((err) => console.log(err.message));
 
     },
-//    fetchPostIDs() {
-//      fetch(`http://localhost:3000/api/post_ids/`)
-//          .then((response) => response.json())
-//          .then((data) => (this.posts = data))
-//          .catch((err) => console.log(err.message));
-//    },
+
     logout() {
       fetch("http://localhost:3000/logout", {
         credentials: 'include', //  Don't forget to specify this if you need cookies
@@ -89,7 +84,6 @@ export default {
             console.log(data);
             console.log('jwt removed');
             this.$router.push("/login");
-            //location.assign("/");
           })
           .catch((e) => {
             console.log(e);

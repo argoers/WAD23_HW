@@ -1,3 +1,7 @@
+/*
+The code is based on the work of Practical sessions 12 & 13
+ */
+
 const express = require('express');
 const pool = require('./database');
 const cors = require('cors');
@@ -21,7 +25,6 @@ const maxAge = 90 * 60; //unlike cookies, the expiresIn in jwt token is calculat
 
 const generateJWT = (id) => {
     return jwt.sign({ id }, secret, { expiresIn: maxAge })
-        //jwt.sign(payload, secret, [options, callback]), and it returns the JWT as string
 }
 
 app.listen(port, () => {
@@ -37,20 +40,19 @@ app.get('/authenticate_user', async(req, res) => {
     let authenticated = false; // a user is not authenticated until proven the opposite
     try {
         if (token) { //checks if the token exists
-            //jwt.verify(token, secretOrPublicKey, [options, callback]) verify a token
             await jwt.verify(token, secret, (err) => { //token exists, now we try to verify it
                 if (err) { // not verified, redirect to login page
                     console.log(err.message);
                     console.log('token is not verified');
                     res.send({ "authenticated": authenticated }); // authenticated = false
                 } else { // token exists and it is verified 
-                    console.log('author is authinticated');
+                    console.log('User is authinticated');
                     authenticated = true;
                     res.send({ "authenticated": authenticated }); // authenticated = true
                 }
             })
         } else { //applies when the token does not exist
-            console.log('author is not authinticated');
+            console.log('User is not authenticated');
             res.send({ "authenticated": authenticated }); // authenticated = false
         }
     } catch (err) {
@@ -63,16 +65,20 @@ app.get('/authenticate_user', async(req, res) => {
 app.post('/signup', async(req, res) => {
     try {
         console.log("a signup request has arrived");
-        //console.log(req.body);
-        const { email, password } = req.body;
 
+        const { email, password } = req.body;
+        //Check if such user already exists
+        const user = await pool.query("SELECT * FROM users WHERE email = $1", [email]);
+        if (user.rows.length !== 0) return res.status(401).json({ error: "User is already registered" });
+
+        //Add new user to the table
         const salt = await bcrypt.genSalt(); //  generates the salt, i.e., a random string
         const bcryptPassword = await bcrypt.hash(password, salt) // hash the password and the salt 
         const authUser = await pool.query( // insert the user and the hashed password into the database
             "INSERT INTO users(email, password) values ($1, $2) RETURNING*", [email, bcryptPassword]
         );
         console.log(authUser.rows[0].id);
-        const token = await generateJWT(authUser.rows[0].id); // generates a JWT by taking the user id as an input (payload)
+        const token = await generateJWT(authUser.rows[0].id); // generates a JWT by taking the user id as an input
         res
             .status(201)
             .cookie('jwt', token, { maxAge: 6000000, httpOnly: true })
@@ -125,7 +131,7 @@ app.get('/logout', (req, res) => {
 //////////////// POSTS part /////////////////////////
 
 
-/// Get all posts
+/// GET all posts
 app.get('/posts', async(req, res) => {
     try {
         console.log("get posts request has arrived");
@@ -138,6 +144,7 @@ app.get('/posts', async(req, res) => {
     }
 });
 
+// GET all post IDs
 app.get('/post_ids', async(req, res) => {
     try {
         console.log("get post IDs request has arrived");
@@ -150,6 +157,7 @@ app.get('/post_ids', async(req, res) => {
     }
 });
 
+// GET given post
 app.get('/posts/:id', async(req, res) => {
     try {
         console.log("get a post with route parameter  request has arrived");
@@ -166,6 +174,7 @@ app.get('/posts/:id', async(req, res) => {
     }
 });
 
+//Update given post
 app.put('/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
@@ -180,9 +189,7 @@ app.put('/posts/:id', async(req, res) => {
     }
 });
 
-
-
-// Task 5
+//Delete given post
 app.delete('/posts/:id', async(req, res) => {
     try {
         const { id } = req.params;
@@ -197,7 +204,7 @@ app.delete('/posts/:id', async(req, res) => {
     }
 });
 
-
+//DELETE all posts
 app.delete('/posts', async(req, res) => {
     try {
         console.log("delete all posts request has arrived");
@@ -210,6 +217,7 @@ app.delete('/posts', async(req, res) => {
     }
 });
 
+//ADD New Post
 app.post('/posts', async(req, res) => {
     try {
         console.log("a post request has arrived");

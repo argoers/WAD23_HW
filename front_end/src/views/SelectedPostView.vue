@@ -1,7 +1,7 @@
 <template>
   <!-- View for Posts page,
    uses HeaderComponent for header,
-   posts are created based on postComponent
+   post body is shown in the middle
    Footer-component for footer
    -->
   <div class="page-container">
@@ -89,19 +89,12 @@ export default {
       })
           .then((response) => {
             console.log(response.data);
-            //this.$router.push("/apost/" + this.post.id);
-            // We are using the router instance of this element to navigate to a different URL location
             this.$router.push("/");
           })
           .catch((e) => {
             console.log(e);
           });
     }
-    // Method to reset likes
-    // triggers action, which performs asynchronous operation
-    //resetLikes: function() {
-    //  this.$store.dispatch("resetLikesAct")
-    //}
   },
 
   mounted() {

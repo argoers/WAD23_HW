@@ -4,9 +4,6 @@
       <div class="post-date">{{parseDate(blogPost.create_time)}}</div>
     </div>
     <p class="post-text">{{blogPost.body}}</p>
-<!--    <div><button class="likeButton" v-on:click="addLike(blogPost.id) "><img class="likeIcon" :src="defaultImagePath.concat('like.png')"></button>
-      <div class="likeNumber">{{blogPost.likes}} likes</div>
-    </div> -->
   </div>
 </template>
 
@@ -25,11 +22,6 @@ export default {
       defaultImagePath: "./images/"
     }},
   methods:{
-    // Method to add like
-    // triggers action, which performs asynchronous operation
-    addLike(id){
-      this.$store.dispatch("addLikeAct", id)
-    },
     parseDate(timeString){
       console.log(timeString)
       const date = new Date(timeString)
