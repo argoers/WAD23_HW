@@ -6,7 +6,7 @@
     padding: 7px 8px;
     max-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .footer-box {
     bottom: 5px;
